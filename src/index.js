@@ -3,20 +3,18 @@ import ReactDOM from 'react-dom';
 import { render } from 'react-dom';
 import './index.scss';
 import App from './App';
-import Home from './Home/Home';
+import Home from './components/Home/Home';
+import About from './components/About/About';
 
-import {
-  BrowserRouter,
-  Route,
-  Link
-} from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 render(
-  <BrowserRouter  path="/" component={App}>
+  <Router>
     <div>
-      <Route path="/home" component={Home} />
+      <Route exact path="/" component={Home}/>
+      <Route exact path="/about" component={About}/>
     </div>
-  </BrowserRouter>,
+  </Router>,
 
   document.getElementById('root')
 )
