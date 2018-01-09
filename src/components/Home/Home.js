@@ -3,6 +3,7 @@ import logo from './../../assets/images/logo.svg';
 import './Home.scss';
 import Header from './../Header/Header';
 import News from './../News/News';
+import Button from './../Button/Button';
 
 class Home extends Component {
   render() {
@@ -29,6 +30,7 @@ class Home extends Component {
           <h1 className="App-title">Welcome to My Home Page</h1>
         </div>
         <News news={my_news} />
+        <Button />
       </div>
     );
   }
