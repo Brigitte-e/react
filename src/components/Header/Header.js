@@ -8,6 +8,7 @@ class Header extends Component {
         <nav>
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
+          <Link to="/login">Login</Link>
         </nav>
       </header>
     );

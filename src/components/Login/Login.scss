@@ -1,0 +1,11 @@
+.login {
+  background: pink;
+  padding: 20px 0;
+  form {
+    margin: 0 auto;
+    max-width: 300px;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+  }
+}
