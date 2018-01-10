@@ -7,4 +7,9 @@
     font-size: 30px;
     background: #222;
   }
+  &.active {
+    button {
+      background: pink;
+    }
+  }
 }
