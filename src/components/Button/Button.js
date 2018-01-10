@@ -6,7 +6,7 @@ class Button extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isToggleOn: true
+      isToggleOn: false
     };
 
     this.handleClick = this.handleClick.bind(this);
@@ -24,7 +24,7 @@ class Button extends Component {
 
   render() {
     return (
-      <div className={'button ' + (this.state.isToggleOn ? '' : 'active')}>
+      <div className={'button ' + (this.state.isToggleOn ? 'active' : '')}>
         <button onClick={this.handleClick}>
           {this.state.isToggleOn ? 'ON' : 'OFF'}
         </button>
