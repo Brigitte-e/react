@@ -4,10 +4,12 @@ import Header from './../Header/Header';
 class About extends Component {
   render() {
     return (
-      <div className="about">
+      <div className="container">
         <Header />
         <div className="about">
-          Welcome to About
+          <div className="about">
+            Welcome to About
+          </div>
         </div>
       </div>
     );

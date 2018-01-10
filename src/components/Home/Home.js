@@ -28,15 +28,17 @@ class Home extends Component {
     ];
 
     return (
-      <div className="home">
+      <div className="container">
         <Header />
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to My Home Page</h1>
+        <div className="home">
+          <div className="App-header">
+            <img src={logo} className="App-logo" alt="logo" />
+            <h1 className="App-title">Welcome to My Home Page</h1>
+          </div>
+          <Clock />
+          <News news={my_news} />
+          <Button />
         </div>
-        <Clock />
-        <News news={my_news} />
-        <Button />
       </div>
     );
   }
