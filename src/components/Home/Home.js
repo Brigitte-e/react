@@ -5,6 +5,7 @@ import Header from './../Header/Header';
 import News from './../News/News';
 import Button from './../Button/Button';
 import Clock from './../Clock/Clock';
+import { sayHello, test } from './../../services/hello';
 
 class Home extends Component {
   constructor(props) {
@@ -31,11 +32,12 @@ class Home extends Component {
       <div className="container">
         <Header />
         <div className="home">
-          <div className="App-header">
+          <div className="App-header" onClick={test}>
             <img src={logo} className="App-logo" alt="logo" />
             <h1 className="App-title">Welcome to My Home Page</h1>
           </div>
           <Clock />
+          {sayHello()}
           <News news={my_news} />
           <Button />
         </div>
