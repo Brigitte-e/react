@@ -5,7 +5,7 @@ class About extends Component {
   render() {
     return (
       <div className="container">
-        <Header />
+        <Header location={this.props.location} />
         <div className="about">
           <div className="about">
             Welcome to About

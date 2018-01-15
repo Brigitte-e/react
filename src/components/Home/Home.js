@@ -30,7 +30,8 @@ class Home extends Component {
 
     return (
       <div className="container">
-        <Header />
+        { console.log('props', this.props) }
+        <Header location={this.props.location} />
         <div className="home">
           <div className="App-header" onClick={test}>
             <img src={logo} className="App-logo" alt="logo" />
