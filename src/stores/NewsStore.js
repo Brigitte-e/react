@@ -19,7 +19,22 @@ class NewsStore extends EventEmitter {
 	    ];
 	}
 
+	// test(){
+	// 	setTimeout(() => {this.createNews('title','text')}, 2000)
+	// 	console.log('created', this.news)
+	// }
+
+	createNews(title, text) {
+		this.news.push({
+			title,
+			text
+		});
+
+		this.emit("change");
+	}
+
 	getAll() {
+		// this.test(); // to test emitter (update dom)
 		return this.news;
 	}
 }

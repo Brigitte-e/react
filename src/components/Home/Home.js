@@ -16,7 +16,17 @@ class Home extends Component {
     }
   }
 
+  componentWillMount() {
+    NewsStore.on("change", () => {
+      console.log('change');
+      this.setState({
+        news: NewsStore.getAll()
+      })
+    })
+  }
+
   render() {
+
     return (
       <div className="container">
         { console.log('props', this.props) }
