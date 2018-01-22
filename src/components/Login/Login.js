@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './../Header/Header';
 import './Login.scss';
+import { validate } from './../../services/Validation';
 
 class Login extends Component {
   constructor(props) {
@@ -21,6 +22,7 @@ class Login extends Component {
     this.setState({
       [event.target.id]: event.target.value
     });
+    validate(this.state);
   }
 
   handleSubmit = event => {
