@@ -5,7 +5,7 @@ import Header from './../Header/Header';
 import News from './../News/News';
 import Button from './../Button/Button';
 import Clock from './../Clock/Clock';
-import { sayHello, test } from './../../services/hello';
+import { sayHello, test } from './../../services/Hello';
 import NewsStore from './../../stores/NewsStore'
 
 class Home extends Component {
