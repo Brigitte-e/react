@@ -5,32 +5,32 @@ import Header from './../Header/Header';
 import News from './../News/News';
 import Button from './../Button/Button';
 import Clock from './../Clock/Clock';
-import { sayHello, test } from './../../services/Hello';
+import { sayHello, test } from './../../services/hello';
+import NewsStore from './../../stores/NewsStore'
 
 class Home extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      news: NewsStore.getAll()
+    }
+  }
+
+  componentWillMount() {
+    NewsStore.on("change", () => {
+      console.log('change');
+      this.setState({
+        news: NewsStore.getAll()
+      })
+    })
   }
 
   render() {
-    let my_news = [
-      {
-        title: 'News 1',
-        text: 'Great News 1'
-      },
-      {
-        title: 'News 2',
-        text: 'Great News 2'
-      },
-      {
-        title: 'News 3',
-        text: 'Great News 3'
-      },
-    ];
 
     return (
       <div className="container">
-        <Header />
+        { console.log('props', this.props) }
+        <Header location={this.props.location} />
         <div className="home">
           <div className="App-header" onClick={test}>
             <img src={logo} className="App-logo" alt="logo" />
@@ -38,7 +38,7 @@ class Home extends Component {
           </div>
           <Clock />
           {sayHello()}
-          <News news={my_news} />
+          <News news={this.state.news} />
           <Button />
         </div>
       </div>

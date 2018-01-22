@@ -37,7 +37,7 @@ class Login extends Component {
   render() {
     return (
       <div className="container">
-        <Header />
+        <Header location={this.props.location} />
         <div className="login">
           <form onSubmit={this.handleSubmit}>
             <input type="text" id='email'
